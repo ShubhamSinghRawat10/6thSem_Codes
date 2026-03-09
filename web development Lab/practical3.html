@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Styling Example</title>
+
+    <!-- External CSS -->
+    <!-- This links to an external stylesheet file named style.css -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Internal CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            color: #333;
+        }
+
+        h1 {
+            color: darkblue;
+            text-decoration: underline;
+        }
+
+        .internal-box {
+            background-color: #e0e0ff;
+            padding: 15px;
+            border: 1px solid #000086;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Demonstrating CSS Types</h1>
+
+    <!-- Inline CSS -->
+    <div style="background-color:#fff0e0; padding:15px; border:1px solid #8b6800; margin-bottom:20px;">
+        <h2>Inline CSS Example</h2>
+        <p style="color:#ff4500; font-weight:bold;">
+            This paragraph uses inline CSS.
+        </p>
+    </div>
+
+    <!-- Internal CSS -->
+    <div class="internal-box">
+        <h2>Internal CSS Example</h2>
+        <p>This container uses internal CSS via the internal-box class.</p>
+    </div>
+
+    <!-- External CSS -->
+    <div class="external-box">
+        <h2>External CSS Example</h2>
+        <p>This container uses external CSS via the external-box class.</p>
+        <button class="external-btn">Click Me</button>
+    </div>
+
+</body>
+</html>

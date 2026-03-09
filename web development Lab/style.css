@@ -1,0 +1,61 @@
+/* .external-box {
+    background-color: #006400;
+    color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.external-box h2 {
+    color: #00ff00;
+}
+
+.external-btn {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.external-btn:hover {
+    background-color: #45a049;
+} */
+
+/* CSS Box Model Demonstration Styles */
+.box-model-demo {
+    width: 300px;
+    background-color: #f0f0f0; /* Content background */
+    padding: 20px; /* Padding */
+    border: 5px solid #000; /* Border */
+    margin: 30px; /* Margin */
+    position: relative;
+}
+
+.box-model-demo p {
+    background-color: #fff; /* Content area */
+    margin: 0;
+    padding: 10px;
+    border: 2px dashed #ccc;
+}
+
+/* Labels for demonstration */
+.box-model-demo::before {
+    content: "Margin";
+    position: absolute;
+    top: -25px;
+    left: 0;
+    background-color: #ffcccc;
+    padding: 2px 5px;
+    font-size: 12px;
+}
+
+.box-model-demo::after {
+    content: "Border";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-color: #ccccff;
+    padding: 2px 5px;
+    font-size: 12px;
+    color: #000;
+}
