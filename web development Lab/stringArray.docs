@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>String Methods and Array Functions in PHP</title>
+</head>
+<body>
+
+<?php
+
+$str = "Hello php world";
+
+// String Functions
+echo "<h3>String Functions</h3>";
+
+echo "Original String : " . $str . "<br><br>";
+
+echo "Word Count : " . str_word_count($str) . "<br>";
+
+echo "Reverse : " . strrev($str) . "<br><br>";
+
+echo "Uppercase : " . strtoupper($str) . "<br>";
+
+echo "Lowercase : " . strtolower($str) . "<br>";
+
+echo "Replace PHP with Java : " . str_replace("php", "Java", $str) . "<br>";
+
+echo "String Length : " . strlen($str) . "<br>";
+
+echo "Reverse String : " . strrev($str) . "<br><br>";
+
+
+// Array Functions
+$colors = array("Red", "Blue", "Green", "Yellow");
+
+echo "<h3>Original Array :</h3>";
+print_r($colors);
+echo "<br><br>";
+
+echo "Total Elements : " . count($colors) . "<br><br>";
+
+sort($colors);
+
+echo "<h3>Sorted Array :</h3>";
+print_r($colors);
+echo "<br><br>";
+
+array_push($colors, "Black");
+
+echo "<h3>Array After Adding Element :</h3>";
+print_r($colors);
+echo "<br><br>";
+
+array_pop($colors);
+
+echo "<h3>Array After Removing Last Element :</h3>";
+print_r($colors);
+
+?>
+
+</body>
+</html>
