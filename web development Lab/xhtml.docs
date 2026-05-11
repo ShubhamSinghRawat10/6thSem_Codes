@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Registration Form</title>
+</head>
+
+<body>
+
+<h2>Student Registration Form</h2>
+
+<form method="POST">
+
+    Name:
+    <input type="text" name="name" required>
+    <br><br>
+
+    Email:
+    <input type="email" name="email" required>
+    <br><br>
+
+    <input type="submit" name="submit" value="Register">
+
+</form>
+
+<?php
+
+if (isset($_POST['submit'])) {
+
+    $conn = mysqli_connect("localhost", "root", "", "test");
+
+  
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+
+    $sql = "INSERT INTO students (name, email) VALUES ('$name', '$email')";
+
+    if (mysqli_query($conn, $sql)) {
+        echo "Data Inserted Successfully";
+    } else {
+        echo "Error: " . mysqli_error($conn);
+    }
+
+    // Close connection
+    mysqli_close($conn);
+}
+
+?>
+
+</body>
+</html>
